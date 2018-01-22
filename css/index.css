@@ -1,0 +1,157 @@
+.header{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    font-size: 15pt;
+    width: 100%;
+    height: 8vh;
+    border-bottom: 1px solid lightgray;
+    position:fixed;
+    top:0; 
+    background-color: white;
+}
+
+
+
+#title{
+    float: left;
+    color: rgb(77, 77, 77);
+    font-size: 25pt;
+    height: 100%;
+}
+
+.title{
+    margin-left: 7.5vw;
+    margin-top: 9vh;
+    margin-right: 7.5vw;
+    text-align: center;
+    color: white;
+    height: 13vh;
+    background-color: gray;
+    font-size: 30pt;
+    line-height: 13vh;
+}
+
+html,body{
+    margin: 0;
+}
+
+.content{
+    margin-top: 2vh;
+    height: auto;
+    width: 100%;
+}
+
+.text1{
+    padding-right: 5pt;
+    padding-left: 5pt;
+    height: auto;
+    color: white;
+    width: 100%;
+    background-color:rgb(70, 70, 70);
+    margin-top: 1px;
+    padding-top: 1pt;
+    padding-bottom:1pt;
+}
+.text2{
+    font-size: 10pt;
+    height: auto;
+    width:50%;
+    background-color:rgb(243, 243, 243);
+    margin-top: 1px;
+    float: left;
+    padding-top: 1pt;
+    padding-bottom:1pt;
+}
+.cla{
+    font-size: 10pt;
+    height:auto;
+    text-align: right;
+    padding-right: 5pt;
+    padding-top: 1pt;
+    padding-bottom:1pt;
+    float: left;
+    width: 50%;
+    background-color:rgb(243, 243, 243);
+    margin-top: 1px;
+}
+.text3{
+    height: auto;
+    width: 100%;
+    background-color:white;
+    margin-top: 1px;
+}
+
+.leftDIV{
+    text-indent: 10px;
+    line-height: auto;
+    margin-left: 9vw;
+    width: 53vw;
+    height: 74vh;
+    float: left;
+    margin-top: 1vh;
+}
+
+.rightDIV{
+    text-indent: 20px;
+    margin-right: 9vw;
+    width: 25vw;
+    height: 74vh;
+    float: right;
+    margin-top: 1vh;  
+}
+
+.clas{
+    border-radius: 10px;     
+    padding-top: 1px;
+    width: 100%;
+    height: 45vh;
+    background-color: rgb(238, 237, 237);  
+}
+
+.new{
+    border-radius: 10px;
+    padding-top: 1px;
+    margin-top: 1vh;
+    width: 100%;
+    height: 26vh;
+    background-color: rgb(238, 237, 237);  
+}
+
+.rightTitle{
+    border-radius: 15px;
+    margin-top: 1vh;
+    margin-right: 1vw;
+    margin-left: 1vw;
+    text-indent: 20px;
+    line-height: 4vh;
+    color: white;
+    height: 4vh;
+    background-color:rgb(70, 70, 70);
+}
+
+.rightContent{
+    border-radius: 15px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-right: 1vw;
+    margin-left: 1vw;
+}
+
+.txt{
+    border-radius: 3px;
+    line-height: 3vh;
+    background-color: white;
+    margin-top: 0.5vh;
+    height: 3.3vh;;
+}
+.pa{
+    margin:auto;
+    line-height:2vh;
+    font-size:20pt;
+    bottom: 0;
+}
+.pagination{
+    margin-bottom: 0
+}

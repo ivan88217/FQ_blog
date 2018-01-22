@@ -1,0 +1,96 @@
+.content{
+    margin-top: 9vh;
+    height: 100%;
+    width: 100%;
+}
+
+.table{
+    margin-top: 1vh;
+}
+
+.lst{
+    text-align: center;
+    color: white;
+    background-color:rgb(0, 119, 255);
+}
+
+.thead-inverse{
+    text-align: center;
+    color: white;
+    background-color:rgb(0, 119, 255);
+}
+
+[name=btn]{
+    height: 4vh;
+    width: 5vw;
+    font-size: 10pt;
+    line-height: 1vh;
+    align-self: auto;
+}
+
+#tbl{
+    width: 100%;
+    margin-top: -2vh;
+    font-size: 11pt;
+}
+
+.title{
+    width: 62%;
+}
+
+.switch{
+    width: 5%;
+}
+.function{
+    width: 7%;
+}
+.past{
+    width: 10%
+}
+.response{
+    width: 10%;
+}
+.class{
+    width: 8%;
+}
+[name=table_btn]{
+    width: 2vw;
+    height: 3vh;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    line-height: 3vh;
+    font-size: 10pt;
+}
+
+[name=table_cont]{
+    font-size: 10pt;
+    width: 4vw;
+    height: 3vh;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+    line-height: 3vh;
+}
+.tr{
+    height: 2vh;;
+
+}
+.pa{
+    margin:auto;
+    line-height:2vh;
+    font-size:20pt;
+    bottom: 0;
+}
+.pagination{
+    margin-bottom: 0
+}
+span>ul>li>a{
+    background-color: black;
+}
+.tit{
+    width: 20%;
+}
+.contt{
+    width: 35%;
+}
