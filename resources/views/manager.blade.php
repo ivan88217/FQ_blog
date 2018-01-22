@@ -6,6 +6,8 @@
 <div class="container">
     <button type="button" class="btn btn-success" onclick="window.location='manager'">文章管理</button>
     <button type="button" class="btn btn-primary" onclick="window.location='newA'">新增文章</button>
+    <form action="{{asset('edit')}}" method="post">
+            {{ csrf_field() }}
     <table class="table">
         <thead class="lst">
             <tr>
@@ -15,14 +17,13 @@
         <tbody>
             <tr class="tr">
                 <td scope="row">
-                    <button type="button" class="btn btn-danger" name="btn">勾選刪除</button>
+                    <button type="button" class="btn btn-danger" name="btn" onclick="delAll()">勾選刪除</button>
                     <button type="button" class="btn btn-success" name="btn">文章置頂</button>
                 </td>
             </tr>
         </tbody>
     </table>
-    <form action="{{asset('edit')}}" method="post">
-            {{ csrf_field() }}
+    
             <input type="hidden" name="ID">
         <table class="table table-bordered" id="tbl">
             <thead class="thead-inverse">
@@ -42,7 +43,7 @@
                     <td scope="row">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" />
+                                <input type="checkbox" class="form-check-input" name="deleteAll[{{$each->ID}}]" id="" value="checkedValue" />
                             </label>
                         </div>
                     </td>
@@ -60,8 +61,8 @@
                     <td>
                         {{$each->class}}
                     </td>
-                    <td>
-                        <textarea name="title" style="border:none;width:100%;height:100%;resize:none;background-color:white" disabled>{{$each->title}}</textarea>
+                    <td style="padding:0">
+                        <textarea name="title" style="border:none;width:100%;resize:none;background-color:white" disabled rows="5">{{$each->title}}</textarea>
                     </td>
                 </tr>
                 @endforeach
@@ -69,6 +70,11 @@
         </table>
     </form>
     <script>
+        var form = $("form")[0];
+        function delAll(){
+            form.action = "deleteAll";
+            form.submit();
+        }
         $(".tr-content .btn").click(function () {
             var id = this.parentNode.parentNode.getAttribute("data-id"),
                 method = this.getAttribute("data-method"),
@@ -80,8 +86,7 @@
                 cnlBtn = $(`[data-id=${id}] [data-method=cnl]`);
             switch (method) {
                 case "sav":
-                    var form = $("form")[0],
-                        idField = $("[name=ID]")[0];
+                    var idField = $("[name=ID]")[0];
                     idField.value = id;
                     savBtn.html("編").addClass("btn-primary").removeClass("btn-success").attr("data-method", "edt");
                     cnlBtn.html("刪").attr("data-method", "del");

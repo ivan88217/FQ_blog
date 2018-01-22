@@ -52,4 +52,10 @@ class home extends Controller
         ]);
         return back(); 
     }
+    function deleteAll(Request $req){
+        $delete_list = $req->input('deleteAll');
+        DB::table('blog')->whereIn('ID', array_keys($delete_list))
+        ->delete();
+        return redirect()->action('home@manager');
+    }
 }

@@ -20,3 +20,4 @@ Route::get('/delete/{id}', "home@delete");
 Route::get('/content/{id}', "home@content");
 Route::post('/update',"home@update");
 Route::post('/edit',"home@edit");
+Route::post('/deleteAll',"home@deleteAll");
