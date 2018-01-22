@@ -38,7 +38,7 @@
                 <tr>
                     <td colspan="2">
                         <div class="form-group">
-                            <textarea class="form-control" name="content" id="" rows="3"></textarea>
+                            <textarea class="form-control" name="content" id="" rows="10" style="resize:none" placeholder="內容"></textarea>
                         </div>
                     </td>
                 </tr>

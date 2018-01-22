@@ -42,7 +42,7 @@
         @endforeach
         <input type="text" class="form-control" name="title" id="" aria-describedby="helpId" placeholder="標題">
         <small id="helpId" class="form-text text-muted">&nbsp;</small>
-        <textarea name="content" id="" rows="10" class="form-control" placeholder="內容" style="resize:none;overflow:hidden"></textarea>
+        <textarea name="content" id="" rows="10" class="form-control" placeholder="內容" style="resize:none;"></textarea>
         <small id="helpId" class="form-text text-muted"></small>
         <button type="submit" class="btn btn-primary" name="btn" style="float:right">送出</button>
     </form>
