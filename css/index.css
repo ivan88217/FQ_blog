@@ -94,7 +94,6 @@ html,body{
 }
 
 .rightDIV{
-    text-indent: 20px;
     margin-right: 9vw;
     width: 25vw;
     height: 74vh;
@@ -144,7 +143,9 @@ html,body{
     line-height: 3vh;
     background-color: white;
     margin-top: 0.5vh;
+    width: 100%;
     height: 3.3vh;;
+    padding: 0;
 }
 .pa{
     margin:auto;

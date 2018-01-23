@@ -12,15 +12,29 @@ class home extends Controller
     
     function index(){
         $All = DB::table('blog')->paginate(5);
-        return view('index',['All' => $All]);
+        $gt=DB::table('blog')->get();
+        return view('index',['All' => $All,'gt' =>$gt]);
+    }
+    function index1($cls){
+        $All = DB::table('blog')->where('class',$cls)->paginate(5);
+        $gt=DB::table('blog')->get();
+        return view('index',['All' => $All,'gt' =>$gt]);
     }
     function manager(){
         $All = DB::table('blog')->paginate(10);
         return view('manager',['All' => $All]);
     }
+
+    function search(Request $title){
+        $All=DB::table('blog')->where('title','LIKE','%'.$title->title.'%')->paginate(10);
+        $gt=DB::table('blog')->get();
+        return view('index',['All' => $All,'gt' =>$gt]);
+    }
+
     function newA(){
         return view('newArticle');
     }
+
     public function insert(Request $req){
         DB::table('blog')->insert([
             'title' => $req->title,
@@ -29,22 +43,12 @@ class home extends Controller
         ]);
         return redirect()->action('home@manager');
     }
+
     function delete($id){
         DB::delete("DELETE FROM `blog` WHERE `blog`.`ID` =".$id);
         return redirect()->action('home@manager');
     }
-    function content($id){
-        $All = DB::table('blog')->where('ID','=',$id)->paginate(10);
-        return view('content',['All' => $All]);
-    }
-    function update(Request $req){
-        DB::table('blog')->where('ID','=',$req->ID)
-        ->update([
-            'title' => $req->title,
-            'content' =>  $req->content,
-        ]);
-        return back(); 
-    }
+    
     function edit(Request $req){
         DB::table('blog')->where('ID','=',$req->ID)
         ->update([
@@ -52,6 +56,7 @@ class home extends Controller
         ]);
         return back(); 
     }
+
     function deleteAll(Request $req){
         $delete_list = $req->input('deleteAll');
         DB::table('blog')->whereIn('ID', array_keys($delete_list))
