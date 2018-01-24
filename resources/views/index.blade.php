@@ -16,7 +16,7 @@
     </form>
     
     @foreach($All as $each)
-        <div class="content" onclick="location='indexcontent/{{$each->ID}}'">
+        <div class="content" onclick="location='/blog/indexcontent/{{$each->ID}}'">
             <div class="text1 btn-primary">{{$each->title}}</div>
             <div class="text2"> 發布時間:{{$each->created_at}} </div>
             <div class="cla">類別:{{$each->class}}</div>

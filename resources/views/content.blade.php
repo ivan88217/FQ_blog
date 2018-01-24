@@ -16,6 +16,7 @@
         </thead>
         <tbody>
             @foreach($All as $each)
+            
             <tr class="tr">
                 <td>
                     {{$each->created_at}}
